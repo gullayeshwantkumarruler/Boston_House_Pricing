@@ -53,3 +53,7 @@ Use this custom Data for Json input in Postman
 }
 ```
 
+For deployment in heroku - create Procfile so that on application start you need to run these commands using gunicorn(wsg applications concurrently)(include gunicorn in requirements.txt)
+````
+web: gunicorn app:app
+```
