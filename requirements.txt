@@ -1,8 +1,6 @@
-python==3.7
 Flask
 sklearn
 pandas
 numpy
-seaborn
-pickle
+matplotlib
 gunicorn

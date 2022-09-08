@@ -57,3 +57,21 @@ For deployment in heroku - create Procfile so that on application start you need
 ````
 web: gunicorn app:app
 ```
+
+Dockerfile to run as a docker container that interacts with the kernel of the operating system.( Helps to run code in any operating system)
+```
+FROM - used to select a base image from dockerhub
+COPY - copy whole code from repository to base image ( . is current to the path required)
+WORKDIR - mention the current working directory
+RUN - install dependencies
+EXPOSE - access the application inside the container so expose a port within a docker container
+CMD - gunicorn and workers for parallel and ipaddress for local address(local host heroku)
+```
+main.yaml which sometimes written and can be used from others so it is sometimes not required to defiine the entire workflow.<br>
+main.yaml defines the entire workflow<br>
+Here you require three important things that needs to be provided in the github actions(they are present in the heroku platform itself)<br>
+```
+HEROKU_EMAIL
+HEROKU_API_KEY
+HEROKU_APP_NAME
+```
